@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_main"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="com.hugo.test.ui.main.fragment.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_nav_main_to_nav_enter_car"
+            app:destination="@id/nav_enter_car"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+        <action
+            android:id="@+id/action_nav_main_to_out_car"
+            app:destination="@id/nav_out_car"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/nav_main_to_nav_residents"
+            app:destination="@id/nav_residents"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            />
+        <action
+            android:id="@+id/action_nav_main_to_nav_settings"
+            app:destination="@id/nav_settings"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_enter_car"
+        android:name="com.hugo.test.ui.entercar.EnterCarFragment"
+        android:label="fragment_enter_car"
+        tools:layout="@layout/fragment_enter_car" />
+    <fragment
+        android:id="@+id/nav_out_car"
+        android:name="com.hugo.test.ui.outcar.OutCarFragment"
+        android:label="fragment_out_car"
+        tools:layout="@layout/fragment_out_car" />
+    <fragment
+        android:id="@+id/nav_residents"
+        android:name="com.hugo.test.ui.residents.ResidentsFragment"
+        android:label="fragment_residents"
+        tools:layout="@layout/fragment_residents" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.hugo.test.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_nav_settings_to_nav_detail_pay"
+            app:destination="@id/nav_detail_pay"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_detail_pay"
+        android:name="com.hugo.test.ui.settings.DetailPayFragment"
+        android:label="fragment_detail_pay"
+        tools:layout="@layout/fragment_detail_pay" />
+</navigation>

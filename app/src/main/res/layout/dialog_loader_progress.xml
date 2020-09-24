@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTranslucentBlack"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin6"
+            android:paddingLeft="@dimen/margin9"
+            android:paddingRight="@dimen/margin9"
+            android:layout_marginBottom="@dimen/margin4"
+            android:layout_marginTop="@dimen/margin4"
+            android:background="@drawable/background_simple_alert">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin4">
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/progressBar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin2"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:layout_marginEnd="@dimen/margin2"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="loading.json"
+                    app:lottie_loop="true"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtLoading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="cargando"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    style="@style/TextViewContent"
+                    />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</layout>
